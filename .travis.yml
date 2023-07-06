@@ -1,4 +1,11 @@
+os: windows
 language: java
 jdk:
   - openjdk11
-script:  ./mvnw clean install
+
+before_script:
+  - choco install unzip
+
+script:
+  - javac -version
+  - java -jar NameSorter-1.0.jar
